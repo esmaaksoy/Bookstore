@@ -9,7 +9,7 @@ export const Header = ({setClick}) => {
     <Container className="header">
       <div className="d-flex align-items-center">
       <img src="./img/book-2343533_1280.webp" alt="" width="150px"/>
-      <h1>Book Shop</h1>
+      <h1>Bookstore</h1>
       </div>
      
       <Stack
