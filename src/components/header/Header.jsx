@@ -4,17 +4,21 @@ import "./Header.scss";
 import { categories } from "../../helper/data";
 
 export const Header = ({setClick}) => {
-
   return (
+    
     <Container className="header">
-      <h1>Products List</h1>
+      <div className="d-flex align-items-center">
+      <img src="./img/book-2343533_1280.webp" alt="" width="150px"/>
+      <h1>Book Shop</h1>
+      </div>
+     
       <Stack
         direction="vertical"
         gap={3}
         className="btns justify-content-center flex-md-row"
       >
    {categories.map((category)=> (
-    <Button type="button" onClick={(e)=>setClick(e.target.innerText)}>{category.toUpperCase()}</Button>
+    <Button type="button" onClick={(e)=>setClick(e.target.textContent)}>{category.toUpperCase()}</Button>
    ))}
       </Stack>
     </Container>

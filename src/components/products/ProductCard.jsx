@@ -7,7 +7,7 @@ const ProductCard = ({id,title,price,image}) => {
   return (
     <Card className="rounded-2 m-auto card" role="button">
       <Card.Header className="d-flex justify-content-between">
-        <Card.Title>{price}</Card.Title>
+        <Card.Title>{price} $</Card.Title>
         <MdFavorite size={30} className={show ? "text-danger" : "text-dark"} onClick={()=>setShow(!show)}/>
       </Card.Header>
       <Card.Img variant="top" src={image} className="player-logo" />
