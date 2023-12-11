@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const ProductsList = () => {
   const [value, setValue] = useState("");
-  const [click,setClick]=useState("");
+  const [click,setClick]=useState("all");
   console.log(click)
   return (
     <>
@@ -21,9 +21,10 @@ const ProductsList = () => {
       />
       <Container className="product-list rounded-4 my-4 p-3">
         <Row className="g-3 justify-content-center">
+         
           {products
             .filter((item) =>
-              item.title.toLowerCase().includes(value.toLowerCase().trim()) && item.category.toLowerCase() === click.toLowerCase()
+             item.title.toLowerCase().includes(value.toLowerCase().trim()) && (click.toLowerCase() === "all" ? item : item.category.toLowerCase() === click.toLowerCase())
             )
             .map((product) => (
               <Col>

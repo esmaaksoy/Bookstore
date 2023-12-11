@@ -14,7 +14,7 @@ export const Header = ({setClick}) => {
         className="btns justify-content-center flex-md-row"
       >
    {categories.map((category)=> (
-    <Button type="button" onClick={(e)=>setClick(e.target.innerText)}>{category}</Button>
+    <Button type="button" onClick={(e)=>setClick(e.target.innerText)}>{category.toUpperCase()}</Button>
    ))}
       </Stack>
     </Container>
